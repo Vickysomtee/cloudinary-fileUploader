@@ -15,8 +15,8 @@ app.get('/', (req, res, next) => {
   res.send("Hello World")
 })
 
-app.use("/uploader", uploadsRoute)
+app.use("/upload", uploadsRoute)
 
-app.listen( 4000, () => {
+app.listen( process.env.PORT || 4000, () => {
   console.log("server has started")
 });
